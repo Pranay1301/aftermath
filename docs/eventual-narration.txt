@@ -1,0 +1,15 @@
+Aftermath asks a narrow question: after a worker dies, does a missing receipt make repeating its action safe?
+
+This private supplement changes the simulated provider. A dispatch can be committed while its lookup still returns nothing. These controls explore recorded executions, not live actions.
+
+Start after the effect commits, before the local receipt. Blind retry and receipt caching each produce two fictional dispatches. Contract-aware recovery sees an empty lagged lookup and holds. One dispatch exists, but the worker does not claim it can prove that yet.
+
+Open its persisted events. Intent, abrupt process death, fresh recovery, and an inconclusive lookup are separate steps. The lab actually kills a Python subprocess. It does not merely raise an exception.
+
+Now select after visibility and redelivery. Only the experiment driver exposes committed receipts. The worker cannot invoke or observe that barrier. A matching positive receipt lets guarded recovery finish without a second dispatch.
+
+Switch to death before provider commit. There is no committed effect, even after visibility. Guarded recovery still holds. Waiting for a negative answer is not proof that retrying is safe.
+
+Across seven guarded fixtures, three holds become two. There are no duplicates in these fixtures, but two tasks remain unfinished. The after phase includes another delivery, so it is not an equal-attempt success-rate comparison.
+
+These are simulated contracts, fictional parcels, local locks and selected crash boundaries. Positive receipts are assumed truthful and durable. No model, real service, pending remote request, distributed lock or universal exactly-once guarantee is included.

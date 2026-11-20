@@ -1,0 +1,33 @@
+{
+  "python": "3.10.12",
+  "platform": "Linux",
+  "source_sha256": {
+    "aftermath/__init__.py": "bb34062a9360f098f7161f51bd92b59d57c3f96c58c618f09cd7d52391e15008",
+    "aftermath/eventual_lab.py": "0b17062e96f620b25f4a7b95cba6ba5e6438449ec9cb9277964377ecddee588b",
+    "aftermath/lab.py": "61d19e93ad3b813a8aa59fef2e3109352e9b60986fba27a9d16a4c298636ad38",
+    "aftermath/provider.py": "5f68707e92224d22326203ffdb59f4ba7d0be4fa5cfe526c89dc99a25c6c8f9c",
+    "aftermath/store.py": "c500c3005872d92c146f6cde7b8ae89c4eb2056d6968fbdaffe205974e368cc9",
+    "aftermath/worker.py": "a30cf81788cb6a60bd8610df2e8a81913f55dd9cce46cd136cc0ca6c637f3ddf",
+    "tests/test_eventual.py": "3fdc3d75c526d4ef1764ca4febef8408fcc1cedc27597623adc7c24000d493aa",
+    "tests/test_lab.py": "3bd5dc6534ced412ed8a0725fee1521c27f7252b877a0bd86a28ef417ed7ba3a",
+    "web/eventual.html": "3de384f75ac3c9c22689504405b947f76d8ade49982338c4fed41ad1ebab3fdd",
+    "web/eventual.js": "bea767cf0f845072fd5a06157b5519c1943a8db9fda2c4db8a40038d71bad890",
+    "web/eventual.css": "ee1921ff032fec72b83b4e657b7c8512b26334377e2f9d92d01c29952820009b",
+    "tests/browser_eventual.py": "dde28585ab10687ece6bd0c5f25fb58ea284cb785892c97f8f7c16487cde2ec9"
+  },
+  "tests": "101 passed",
+  "matrix_cells": 21,
+  "external_calls": 0,
+  "model_calls": 0,
+  "visual_check": {
+    "views": 14,
+    "policy_cards_checked_against_raw_evidence": 42,
+    "widths": [
+      1280,
+      390,
+      320
+    ],
+    "page_errors": 0,
+    "overflow": false
+  }
+}

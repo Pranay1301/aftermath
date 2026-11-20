@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-20",
+  "tests": "104 passed: 101 crash/domain + 3 media-server",
+  "source_sha256": {
+    "web/eventual.html": "aa450e96599106906204bbe1154cc680078ed61b826a1ef5fdeafb6cf7d15a46",
+    "web/eventual.js": "bea767cf0f845072fd5a06157b5519c1943a8db9fda2c4db8a40038d71bad890",
+    "web/eventual.css": "ee1921ff032fec72b83b4e657b7c8512b26334377e2f9d92d01c29952820009b",
+    "web/index.html": "0418783865a5fd923d01ad416373116dda5d2be8102b7369835bb72a471cbc26",
+    "tests/test_serve.py": "c869f49c59466f5e55e1feff3e7979692a5fe6f7ed4208c6123921e82ea784ce",
+    "tests/browser_eventual.py": "dde28585ab10687ece6bd0c5f25fb58ea284cb785892c97f8f7c16487cde2ec9",
+    "tests/test_eventual.py": "3fdc3d75c526d4ef1764ca4febef8408fcc1cedc27597623adc7c24000d493aa",
+    "tests/test_lab.py": "3bd5dc6534ced412ed8a0725fee1521c27f7252b877a0bd86a28ef417ed7ba3a",
+    "aftermath/serve.py": "1ed1d316e88dd45d014041cff57e58cde0cd08526d7bdb8b9937044b4a07c2fd",
+    "aftermath/provider.py": "5f68707e92224d22326203ffdb59f4ba7d0be4fa5cfe526c89dc99a25c6c8f9c",
+    "aftermath/worker.py": "a30cf81788cb6a60bd8610df2e8a81913f55dd9cce46cd136cc0ca6c637f3ddf",
+    "aftermath/store.py": "c500c3005872d92c146f6cde7b8ae89c4eb2056d6968fbdaffe205974e368cc9",
+    "aftermath/eventual_lab.py": "0b17062e96f620b25f4a7b95cba6ba5e6438449ec9cb9277964377ecddee588b",
+    "aftermath/__init__.py": "bb34062a9360f098f7161f51bd92b59d57c3f96c58c618f09cd7d52391e15008",
+    "aftermath/lab.py": "61d19e93ad3b813a8aa59fef2e3109352e9b60986fba27a9d16a4c298636ad38"
+  },
+  "historical_manifests": "environment.json and eventual-environment.json refer to the dated earlier runs; do not use them as current release hashes"
+}

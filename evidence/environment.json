@@ -1,0 +1,13 @@
+{
+  "run_date": "2026-11-13",
+  "python": "3.10.12",
+  "platform": "Linux",
+  "hashes": {
+    "aftermath/worker.py": "67b4503cbf057a2cbdb610e995f433889d98d40b90f88e678d3543aac63fd68b",
+    "aftermath/provider.py": "31306987ccd28ee1d51943519678e4cdaa0793d3fe9b03c80d8fc0926873b96d",
+    "aftermath/store.py": "876cd69843b7f03e1ef86deda6c968f7c012783a10aba175847ab2150b1dc0d9",
+    "aftermath/__init__.py": "bb34062a9360f098f7161f51bd92b59d57c3f96c58c618f09cd7d52391e15008",
+    "aftermath/lab.py": "61d19e93ad3b813a8aa59fef2e3109352e9b60986fba27a9d16a4c298636ad38",
+    "tests/test_lab.py": "3bd5dc6534ced412ed8a0725fee1521c27f7252b877a0bd86a28ef417ed7ba3a"
+  }
+}

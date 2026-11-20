@@ -1,0 +1,4737 @@
+{
+  "schema_version": 1,
+  "kind": "executed deterministic crash matrix",
+  "model_calls": 0,
+  "external_calls": 0,
+  "cuts": [
+    "none",
+    "before_intent",
+    "after_intent",
+    "before_effect",
+    "during_effect",
+    "after_effect",
+    "after_receipt"
+  ],
+  "totals": {
+    "blind": {
+      "completed_once": 15,
+      "duplicate": 6,
+      "held": 0,
+      "false_success": 6,
+      "safe_outcome": 15,
+      "cases": 21
+    },
+    "receipt": {
+      "completed_once": 19,
+      "duplicate": 2,
+      "held": 0,
+      "false_success": 2,
+      "safe_outcome": 19,
+      "cases": 21
+    },
+    "guarded": {
+      "completed_once": 18,
+      "duplicate": 0,
+      "held": 3,
+      "false_success": 0,
+      "safe_outcome": 21,
+      "cases": 21
+    }
+  },
+  "results": [
+    {
+      "policy": "blind",
+      "contract": "keyed",
+      "cut": "none",
+      "exit_code": 0,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "blind policy / keyed provider"
+        },
+        {
+          "seq": 7,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 8,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 9,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 10,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "keyed",
+      "cut": "none",
+      "exit_code": 0,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "receipt policy / keyed provider"
+        },
+        {
+          "seq": 7,
+          "phase": "cache_hit",
+          "detail": "local receipt 1"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "keyed",
+      "cut": "none",
+      "exit_code": 0,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "guarded policy / keyed provider"
+        },
+        {
+          "seq": 7,
+          "phase": "cache_hit",
+          "detail": "local receipt 1"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "keyed",
+      "cut": "before_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at before_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "blind policy / keyed provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "keyed",
+      "cut": "before_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at before_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "receipt policy / keyed provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "keyed",
+      "cut": "before_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at before_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "guarded policy / keyed provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "keyed",
+      "cut": "after_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at after_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "blind policy / keyed provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "keyed",
+      "cut": "after_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at after_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "receipt policy / keyed provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "keyed",
+      "cut": "after_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at after_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "guarded policy / keyed provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "keyed",
+      "cut": "before_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at before_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "blind policy / keyed provider"
+        },
+        {
+          "seq": 5,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 6,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "keyed",
+      "cut": "before_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at before_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "receipt policy / keyed provider"
+        },
+        {
+          "seq": 5,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 6,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "keyed",
+      "cut": "before_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at before_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "guarded policy / keyed provider"
+        },
+        {
+          "seq": 5,
+          "phase": "reconcile",
+          "detail": "retry with the same provider-enforced idempotency key"
+        },
+        {
+          "seq": 6,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 7,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 9,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "keyed",
+      "cut": "during_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at during_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "blind policy / keyed provider"
+        },
+        {
+          "seq": 5,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 6,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "keyed",
+      "cut": "during_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at during_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "receipt policy / keyed provider"
+        },
+        {
+          "seq": 5,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 6,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "keyed",
+      "cut": "during_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at during_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "guarded policy / keyed provider"
+        },
+        {
+          "seq": 5,
+          "phase": "reconcile",
+          "detail": "retry with the same provider-enforced idempotency key"
+        },
+        {
+          "seq": 6,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 7,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 9,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "keyed",
+      "cut": "after_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "crash",
+          "detail": "SIGKILL at after_effect"
+        },
+        {
+          "seq": 5,
+          "phase": "start",
+          "detail": "blind policy / keyed provider"
+        },
+        {
+          "seq": 6,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 7,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 9,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "keyed",
+      "cut": "after_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "crash",
+          "detail": "SIGKILL at after_effect"
+        },
+        {
+          "seq": 5,
+          "phase": "start",
+          "detail": "receipt policy / keyed provider"
+        },
+        {
+          "seq": 6,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 7,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 9,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "keyed",
+      "cut": "after_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "crash",
+          "detail": "SIGKILL at after_effect"
+        },
+        {
+          "seq": 5,
+          "phase": "start",
+          "detail": "guarded policy / keyed provider"
+        },
+        {
+          "seq": 6,
+          "phase": "reconcile",
+          "detail": "retry with the same provider-enforced idempotency key"
+        },
+        {
+          "seq": 7,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 8,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 9,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 10,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "keyed",
+      "cut": "after_receipt",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "crash",
+          "detail": "SIGKILL at after_receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "blind policy / keyed provider"
+        },
+        {
+          "seq": 7,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 8,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 9,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 10,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "keyed",
+      "cut": "after_receipt",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "crash",
+          "detail": "SIGKILL at after_receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "receipt policy / keyed provider"
+        },
+        {
+          "seq": 7,
+          "phase": "cache_hit",
+          "detail": "local receipt 1"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "keyed",
+      "cut": "after_receipt",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / keyed provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "crash",
+          "detail": "SIGKILL at after_receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "guarded policy / keyed provider"
+        },
+        {
+          "seq": 7,
+          "phase": "cache_hit",
+          "detail": "local receipt 1"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "searchable",
+      "cut": "none",
+      "exit_code": 0,
+      "recovery": {
+        "status": "done",
+        "receipt": 2
+      },
+      "effect_count": 2,
+      "duplicate": true,
+      "completed_once": false,
+      "held": false,
+      "false_success": true,
+      "safe_outcome": false,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 2,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "blind policy / searchable provider"
+        },
+        {
+          "seq": 7,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 8,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 2"
+        },
+        {
+          "seq": 9,
+          "phase": "receipt",
+          "detail": "durable local receipt 2"
+        },
+        {
+          "seq": 10,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        },
+        {
+          "receipt": 2,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "searchable",
+      "cut": "none",
+      "exit_code": 0,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "receipt policy / searchable provider"
+        },
+        {
+          "seq": 7,
+          "phase": "cache_hit",
+          "detail": "local receipt 1"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "searchable",
+      "cut": "none",
+      "exit_code": 0,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "guarded policy / searchable provider"
+        },
+        {
+          "seq": 7,
+          "phase": "cache_hit",
+          "detail": "local receipt 1"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "searchable",
+      "cut": "before_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at before_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "blind policy / searchable provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "searchable",
+      "cut": "before_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at before_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "receipt policy / searchable provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "searchable",
+      "cut": "before_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at before_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "guarded policy / searchable provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "searchable",
+      "cut": "after_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at after_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "blind policy / searchable provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "searchable",
+      "cut": "after_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at after_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "receipt policy / searchable provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "searchable",
+      "cut": "after_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at after_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "guarded policy / searchable provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "searchable",
+      "cut": "before_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at before_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "blind policy / searchable provider"
+        },
+        {
+          "seq": 5,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 6,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "searchable",
+      "cut": "before_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at before_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "receipt policy / searchable provider"
+        },
+        {
+          "seq": 5,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 6,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "searchable",
+      "cut": "before_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at before_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "guarded policy / searchable provider"
+        },
+        {
+          "seq": 5,
+          "phase": "reconcile",
+          "detail": "strongly consistent lookup: absent"
+        },
+        {
+          "seq": 6,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 7,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 9,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "searchable",
+      "cut": "during_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at during_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "blind policy / searchable provider"
+        },
+        {
+          "seq": 5,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 6,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "searchable",
+      "cut": "during_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at during_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "receipt policy / searchable provider"
+        },
+        {
+          "seq": 5,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 6,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "searchable",
+      "cut": "during_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at during_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "guarded policy / searchable provider"
+        },
+        {
+          "seq": 5,
+          "phase": "reconcile",
+          "detail": "strongly consistent lookup: absent"
+        },
+        {
+          "seq": 6,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 7,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 9,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "searchable",
+      "cut": "after_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 2
+      },
+      "effect_count": 2,
+      "duplicate": true,
+      "completed_once": false,
+      "held": false,
+      "false_success": true,
+      "safe_outcome": false,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 2,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "crash",
+          "detail": "SIGKILL at after_effect"
+        },
+        {
+          "seq": 5,
+          "phase": "start",
+          "detail": "blind policy / searchable provider"
+        },
+        {
+          "seq": 6,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 7,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 2"
+        },
+        {
+          "seq": 8,
+          "phase": "receipt",
+          "detail": "durable local receipt 2"
+        },
+        {
+          "seq": 9,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        },
+        {
+          "receipt": 2,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "searchable",
+      "cut": "after_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 2
+      },
+      "effect_count": 2,
+      "duplicate": true,
+      "completed_once": false,
+      "held": false,
+      "false_success": true,
+      "safe_outcome": false,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 2,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "crash",
+          "detail": "SIGKILL at after_effect"
+        },
+        {
+          "seq": 5,
+          "phase": "start",
+          "detail": "receipt policy / searchable provider"
+        },
+        {
+          "seq": 6,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 7,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 2"
+        },
+        {
+          "seq": 8,
+          "phase": "receipt",
+          "detail": "durable local receipt 2"
+        },
+        {
+          "seq": 9,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        },
+        {
+          "receipt": 2,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "searchable",
+      "cut": "after_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "crash",
+          "detail": "SIGKILL at after_effect"
+        },
+        {
+          "seq": 5,
+          "phase": "start",
+          "detail": "guarded policy / searchable provider"
+        },
+        {
+          "seq": 6,
+          "phase": "reconcile",
+          "detail": "strongly consistent lookup: receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 8,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 9,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "searchable",
+      "cut": "after_receipt",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 2
+      },
+      "effect_count": 2,
+      "duplicate": true,
+      "completed_once": false,
+      "held": false,
+      "false_success": true,
+      "safe_outcome": false,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 2,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "crash",
+          "detail": "SIGKILL at after_receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "blind policy / searchable provider"
+        },
+        {
+          "seq": 7,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 8,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 2"
+        },
+        {
+          "seq": 9,
+          "phase": "receipt",
+          "detail": "durable local receipt 2"
+        },
+        {
+          "seq": 10,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        },
+        {
+          "receipt": 2,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "searchable",
+      "cut": "after_receipt",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "crash",
+          "detail": "SIGKILL at after_receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "receipt policy / searchable provider"
+        },
+        {
+          "seq": 7,
+          "phase": "cache_hit",
+          "detail": "local receipt 1"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "searchable",
+      "cut": "after_receipt",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / searchable provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "crash",
+          "detail": "SIGKILL at after_receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "guarded policy / searchable provider"
+        },
+        {
+          "seq": 7,
+          "phase": "cache_hit",
+          "detail": "local receipt 1"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "opaque",
+      "cut": "none",
+      "exit_code": 0,
+      "recovery": {
+        "status": "done",
+        "receipt": 2
+      },
+      "effect_count": 2,
+      "duplicate": true,
+      "completed_once": false,
+      "held": false,
+      "false_success": true,
+      "safe_outcome": false,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 2,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "blind policy / opaque provider"
+        },
+        {
+          "seq": 7,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 8,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 2"
+        },
+        {
+          "seq": 9,
+          "phase": "receipt",
+          "detail": "durable local receipt 2"
+        },
+        {
+          "seq": 10,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        },
+        {
+          "receipt": 2,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "opaque",
+      "cut": "none",
+      "exit_code": 0,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "receipt policy / opaque provider"
+        },
+        {
+          "seq": 7,
+          "phase": "cache_hit",
+          "detail": "local receipt 1"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "opaque",
+      "cut": "none",
+      "exit_code": 0,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "guarded policy / opaque provider"
+        },
+        {
+          "seq": 7,
+          "phase": "cache_hit",
+          "detail": "local receipt 1"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "opaque",
+      "cut": "before_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at before_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "blind policy / opaque provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "opaque",
+      "cut": "before_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at before_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "receipt policy / opaque provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "opaque",
+      "cut": "before_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at before_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "guarded policy / opaque provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "opaque",
+      "cut": "after_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at after_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "blind policy / opaque provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "opaque",
+      "cut": "after_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at after_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "receipt policy / opaque provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "opaque",
+      "cut": "after_intent",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "crash",
+          "detail": "SIGKILL at after_intent"
+        },
+        {
+          "seq": 3,
+          "phase": "start",
+          "detail": "guarded policy / opaque provider"
+        },
+        {
+          "seq": 4,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 5,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 6,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "opaque",
+      "cut": "before_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at before_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "blind policy / opaque provider"
+        },
+        {
+          "seq": 5,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 6,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "opaque",
+      "cut": "before_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at before_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "receipt policy / opaque provider"
+        },
+        {
+          "seq": 5,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 6,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "opaque",
+      "cut": "before_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "held",
+        "reason": "unknown external outcome"
+      },
+      "effect_count": 0,
+      "duplicate": false,
+      "completed_once": false,
+      "held": true,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "held",
+          "receipt": null,
+          "reason": "provider outcome cannot be verified"
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at before_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "guarded policy / opaque provider"
+        },
+        {
+          "seq": 5,
+          "phase": "held",
+          "detail": "Ambiguous prior dispatch. No retry and no success claim."
+        }
+      ],
+      "effects": []
+    },
+    {
+      "policy": "blind",
+      "contract": "opaque",
+      "cut": "during_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at during_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "blind policy / opaque provider"
+        },
+        {
+          "seq": 5,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 6,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "opaque",
+      "cut": "during_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at during_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "receipt policy / opaque provider"
+        },
+        {
+          "seq": 5,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 6,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 7,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 8,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "opaque",
+      "cut": "during_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "held",
+        "reason": "unknown external outcome"
+      },
+      "effect_count": 0,
+      "duplicate": false,
+      "completed_once": false,
+      "held": true,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "held",
+          "receipt": null,
+          "reason": "provider outcome cannot be verified"
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "crash",
+          "detail": "SIGKILL at during_effect"
+        },
+        {
+          "seq": 4,
+          "phase": "start",
+          "detail": "guarded policy / opaque provider"
+        },
+        {
+          "seq": 5,
+          "phase": "held",
+          "detail": "Ambiguous prior dispatch. No retry and no success claim."
+        }
+      ],
+      "effects": []
+    },
+    {
+      "policy": "blind",
+      "contract": "opaque",
+      "cut": "after_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 2
+      },
+      "effect_count": 2,
+      "duplicate": true,
+      "completed_once": false,
+      "held": false,
+      "false_success": true,
+      "safe_outcome": false,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 2,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "crash",
+          "detail": "SIGKILL at after_effect"
+        },
+        {
+          "seq": 5,
+          "phase": "start",
+          "detail": "blind policy / opaque provider"
+        },
+        {
+          "seq": 6,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 7,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 2"
+        },
+        {
+          "seq": 8,
+          "phase": "receipt",
+          "detail": "durable local receipt 2"
+        },
+        {
+          "seq": 9,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        },
+        {
+          "receipt": 2,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "opaque",
+      "cut": "after_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 2
+      },
+      "effect_count": 2,
+      "duplicate": true,
+      "completed_once": false,
+      "held": false,
+      "false_success": true,
+      "safe_outcome": false,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 2,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "crash",
+          "detail": "SIGKILL at after_effect"
+        },
+        {
+          "seq": 5,
+          "phase": "start",
+          "detail": "receipt policy / opaque provider"
+        },
+        {
+          "seq": 6,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 7,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 2"
+        },
+        {
+          "seq": 8,
+          "phase": "receipt",
+          "detail": "durable local receipt 2"
+        },
+        {
+          "seq": 9,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        },
+        {
+          "receipt": 2,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "opaque",
+      "cut": "after_effect",
+      "exit_code": -9,
+      "recovery": {
+        "status": "held",
+        "reason": "unknown external outcome"
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": false,
+      "held": true,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "held",
+          "receipt": null,
+          "reason": "provider outcome cannot be verified"
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "crash",
+          "detail": "SIGKILL at after_effect"
+        },
+        {
+          "seq": 5,
+          "phase": "start",
+          "detail": "guarded policy / opaque provider"
+        },
+        {
+          "seq": 6,
+          "phase": "held",
+          "detail": "Ambiguous prior dispatch. No retry and no success claim."
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "blind",
+      "contract": "opaque",
+      "cut": "after_receipt",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 2
+      },
+      "effect_count": 2,
+      "duplicate": true,
+      "completed_once": false,
+      "held": false,
+      "false_success": true,
+      "safe_outcome": false,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 2,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "blind policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "crash",
+          "detail": "SIGKILL at after_receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "blind policy / opaque provider"
+        },
+        {
+          "seq": 7,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 8,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 2"
+        },
+        {
+          "seq": 9,
+          "phase": "receipt",
+          "detail": "durable local receipt 2"
+        },
+        {
+          "seq": 10,
+          "phase": "done",
+          "detail": "confirmed from provider receipt"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        },
+        {
+          "receipt": 2,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "receipt",
+      "contract": "opaque",
+      "cut": "after_receipt",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "receipt policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "crash",
+          "detail": "SIGKILL at after_receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "receipt policy / opaque provider"
+        },
+        {
+          "seq": 7,
+          "phase": "cache_hit",
+          "detail": "local receipt 1"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    },
+    {
+      "policy": "guarded",
+      "contract": "opaque",
+      "cut": "after_receipt",
+      "exit_code": -9,
+      "recovery": {
+        "status": "done",
+        "receipt": 1
+      },
+      "effect_count": 1,
+      "duplicate": false,
+      "completed_once": true,
+      "held": false,
+      "false_success": false,
+      "safe_outcome": true,
+      "operations": [
+        {
+          "id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "state": "done",
+          "receipt": 1,
+          "reason": null
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "phase": "start",
+          "detail": "guarded policy / opaque provider"
+        },
+        {
+          "seq": 2,
+          "phase": "intent",
+          "detail": "durable dispatch marker, before provider call"
+        },
+        {
+          "seq": 3,
+          "phase": "provider_return",
+          "detail": "provider returned receipt 1"
+        },
+        {
+          "seq": 4,
+          "phase": "receipt",
+          "detail": "durable local receipt 1"
+        },
+        {
+          "seq": 5,
+          "phase": "crash",
+          "detail": "SIGKILL at after_receipt"
+        },
+        {
+          "seq": 6,
+          "phase": "start",
+          "detail": "guarded policy / opaque provider"
+        },
+        {
+          "seq": 7,
+          "phase": "cache_hit",
+          "detail": "local receipt 1"
+        }
+      ],
+      "effects": [
+        {
+          "receipt": 1,
+          "operation_id": "operation-42",
+          "fingerprint": "5cf06cb68da9b3f2d052fe5cd66d6adb9581837992e1449c8f5ff827d6632f58",
+          "payload": "{\"destination\": \"fictional test bench\", \"parcel\": \"DEMO-42\", \"tool\": \"dispatch_demo_parcel\"}"
+        }
+      ]
+    }
+  ]
+}
